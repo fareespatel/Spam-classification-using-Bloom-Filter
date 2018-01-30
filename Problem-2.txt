@@ -1,0 +1,64 @@
+# Mohammed Farees Patel
+
+# Problem 2
+
+# According to the graph of 'k vs. FPR' attached along with the code, I intend to choose n/m = 4 i.e. n = 4 * m i.e. size of bit_array = 4 * size of set (due to memory constraints) and the value of k = 3 because it has the minimal probability of FP possible when n/m = 4 (orange line in the plot)
+
+#============================Optimal value from Graph========================================
+
+# for k = 3, n/m = 4, Prob(FP) = 0.14689159766 (from the above calculations)
+
+#=================================================================================================
+
+#====================================================
+# Bloom Filter implementation
+# FPR = 14.6892976424%
+#====================================================
+
+#==================== Definations =====================
+# k = No. of hash functions
+# n = size of (hashing based) bit_array in memory
+# m = size of input set S
+#======================================================
+
+#========== DECIDING THE VALUE OF 'k' and 'n' ============
+# n/m = 2, k = 1, FPR = 0.393469340287
+# n/m = 2, k = 2, FPR = 0.399576400894
+# n/m = 2, k = 3, FPR = 0.46886172812
+# n/m = 2, k = 4, FPR = 0.558973154307
+# n/m = 2, k = 5, FPR = 0.651646906166
+# n/m = 2, k = 6, FPR = 0.736081019362
+# n/m = 2, k = 7, FPR = 0.806832643073
+# n/m = 2, k = 8, FPR = 0.862531529669
+# n/m = 2, k = 9, FPR = 0.904348521356
+# n/m = 2, k = 10, FPR = 0.934627247932
+# n/m = 4, k = 1, FPR = 0.221199216929
+# n/m = 4, k = 2, FPR = 0.154818121746
+# n/m = 4, k = 3, FPR = 0.14689159766
+# n/m = 4, k = 4, FPR = 0.159661300151
+# n/m = 4, k = 5, FPR = 0.184907824237
+# n/m = 4, k = 6, FPR = 0.219831320096
+# n/m = 4, k = 7, FPR = 0.262840454739
+# n/m = 4, k = 8, FPR = 0.312450987236
+# n/m = 4, k = 9, FPR = 0.366997776083
+# n/m = 4, k = 10, FPR = 0.424643690315
+# n/m = 8, k = 1, FPR = 0.117503097415
+# n/m = 8, k = 2, FPR = 0.0489290935698
+# n/m = 8, k = 3, FPR = 0.0305793544918
+# n/m = 8, k = 4, FPR = 0.023968650821
+# n/m = 8, k = 5, FPR = 0.0216792170538
+# n/m = 8, k = 6, FPR = 0.0215771414632
+# n/m = 8, k = 7, FPR = 0.0229297488771
+# n/m = 8, k = 8, FPR = 0.025491730766
+# n/m = 8, k = 9, FPR = 0.0292244171051
+# n/m = 8, k = 10, FPR = 0.0341909034641
+# n/m = 16, k = 1, FPR = 0.0605869371865
+# n/m = 16, k = 2, FPR = 0.0138069779022
+# n/m = 16, k = 3, FPR = 0.00499765710079
+# n/m = 16, k = 4, FPR = 0.00239405619756
+# n/m = 16, k = 5, FPR = 0.00139247083856
+# n/m = 16, k = 6, FPR = 0.000935096921134
+# n/m = 16, k = 7, FPR = 0.000701519426159
+# n/m = 16, k = 8, FPR = 0.00057449622218
+# n/m = 16, k = 9, FPR = 0.000504881781943
+# n/m = 16, k = 10, FPR = 0.000469988452064
